@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="practica de herramientas de bootstrap" />
+    <meta name="keywords" content="layot, components, grid" />
+    <meta name="author"
+        content="Elian Nicolas Miranda, Matias Nicolás Salazar, Gabriel Haurane, Wilfredo Joel Solano, Leandro Gabriel Prado, Luis Leonardo Reartez">
+    <meta name="description" content="Ecommerce sobre relojes">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Relojes</title>
+</head>
+
+<body>
+    <header class="position-fixed accordion_h2">
+        <nav class="navbar navbar-expand-lg  pe-2">
+            <div class="container-fluid">
+                <a href="./index.html"><img id="logo" src="./img/imagenLogo.jpeg" alt="logo" class="me-2"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-baseline" id="items">
+                        <li class="nav-item">
+                            <a class="nav-link  active linksNav" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linksNav " href="./pages/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linksNav " href="./pages/contactos.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <button type="button" class="rounded-3 p-1 mb-1 me-2 btn btn-info border-primary-subtle"
+                                data-bs-toggle="modal" data-bs-target="#modal_login">
+                                Iniciar Sesion
+                            </button>
+                        </li>
+                        <li class="nav-item ">
+
+                            <a href="./pages/registro.html"
+                                class="rounded-3 p-1 mb-1 me-2 btn btn-info border-primary-subtle">Registrarse</a>
+                        </li>
+                    </ul>
+
+                    <a href="./pages/carrito.html" class="btn btn-info me-3">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-0" type="search" placeholder="Busque su reloj"
+                            aria-label="Search">
+                        <button type="submit" class="bg-info rounded-1 border-primary-subtle ps-2 pe-2">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="modal fade" id="modal_login" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="miModalLabel">Ingrese sus datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-sm" class="img-fluid">
+                        <img src="./img/smartwatch-reloj-persona-mayor-800x450.webp"
+                            class="rounded mx-auto d-block me-4 img-fluid" alt="imagen del login" id="modal_body_img">
+                        <form>
+                            <div class="form-group mb-3">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="rounded-2" id="email" minlength="10" maxlength="100"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Contraseña">Contraseña:</label>
+                                <input type="password" class="rounded-2" id="Contraseña" minlength="8" maxlength="30"
+                                    required>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="./pages/Error404.html"
+                                    class="position-absolute start-0 ms-3 border-primary-subtle text-light">
+                                    Recuperar Contraseña
+                                </a>
+                                <button type="submit" href="./pages/Error404.html"
+                                    class="rounded-2 p-1 bg-info border-primary-subtle">Iniciar Sesion</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="container-fluid">
+                        <h6 class="text-secondary-emphasis">O inicie sesion con:</h6>
+                        <a href="./pages/Error404.html" class="me-2 fs-3">
+                            <i class="bi bi-google" id="google"></i>
+                        </a>
+                        <a href="./pages/Error404.html" class="fs-3">
+                            <i class="bi bi-facebook" id="fb"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <main class="pt-5">
+        <h1 class="pt-5">SmarTime</h1>
+        <section>
+            <div class="container py-4">
+                <div id="slider-coderfree" class="carousel slide capa" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button class="active" data-bs-target="#slider-coderfree" data-bs-slide-to="0"></button>
+                        <button data-bs-target="#slider-coderfree" data-bs-slide-to="1"></button>
+                        <button data-bs-target="#slider-coderfree" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner carousel-fade">
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img class="d-block w-100" src="./img/banner nuevos/b1.webp"
+                                alt="colección de relojes MARQ®">
+                            <div class="carousel-caption d-none d-md-block text-light bg-dark bg-opacity-75 rounded-5">
+                                <h5>COLECCIÓN DE RELOJES MARQ®</h5>
+                                <p>LA BÚSQUEDA DE LA EXCELENCIA HA ALCANZADO SU PUNTO ÁLGIDO</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img class="d-block w-100" src="./img/banner nuevos/b2.webp" alt="MARQ® by Garmin">
+                            <div class="carousel-caption d-none d-md-block text-light bg-dark bg-opacity-75 rounded-5">
+                                <h5>MARQ® by Garmin</h5>
+                                <p>Los relojes MARQ están diseñados para la grandeza y te permitirán alcanzarla a ti
+                                    también.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img class="d-block w-100" src="./img/banner nuevos/b3.jpg"
+                                alt="Nueva era de relojes inteligentes">
+                            <div class="carousel-caption d-none d-md-block text-light bg-dark bg-opacity-75 rounded-5">
+                                <h5>LA NUEVA ERA DE RELOJES INTELIGENTES</h5>
+                                <p>Enterate de los nuevo relojes inteligentes que vienen a revolucionar el mercado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev " data-bs-target="#slider-coderfree" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#slider-coderfree" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="display-1 text-center my-4">Categoría de Marcas</h3>
+                <div class="accordion" id="marcasAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#marcasAccor" aria-expanded="true" aria-controls="marcasAccor">
+                                Nuestras Marcas
+                            </button>
+                        </h2>
+                        <div id="marcasAccor" class="accordion-collapse collapse show" data-bs-parent="#marcasAcordion">
+                            <section class="row accordion-body">
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/BREITLING.jpg" class="card-img-top img-fluid"
+                                            alt="Marca 1">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/casio.png" class="card-img-top img-fluid" alt="Marca 2">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/GARMIN.png" class="card-img-top img-fluid" alt="Marca 3">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/GUESS.png" class="card-img-top img-fluid" alt="Marca 4">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/MASERATI.png" class="card-img-top img-fluid"
+                                            alt="Marca 5">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/Omega.jpg" class="card-img-top img-fluid" alt="Marca 6">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/PANERAI.jpg" class="card-img-top img-fluid"
+                                            alt="Marca 7">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/ROLEX.jpg" class="card-img-top img-fluid" alt="Marca 8">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/Seiko.jpg" class="card-img-top img-fluid" alt="Marca 9">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/TAGHeuer.jpg" class="card-img-top img-fluid"
+                                            alt="Marca 10">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/14.webp" class="card-img-top img-fluid" alt="Marca 11">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2 mb-3">
+                                    <div class=" brand-card">
+                                        <img src="./img/marcas/png-transparent-samsung-electronics-samsung-galaxy-samsung-logo-text-logo-black-thumbnail.png"
+                                            class="card-img-top img-fluid" alt="Marca 12">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="container mt-5">
+            <h3 class="display-1 text-center mb-3">Ofertas Especiales</h3>
+            <article class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card">
+                        <img src="./img/imagenes del proyecto/ofertas/oferta1.webp" class="card-img-top "
+                            alt="Colmi-P20">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Smartwatch Colmi P20 Plus</h5>
+                            <p class="card-text text-black ">
+                                COLMI P20 Plus adopta el chip de reloj Bluetooth de modo dual RTL8763E, alto
+                                rendimiento, bajo consumo de energía y configuración de almacenamiento flexible
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <p class="mt-3 text-black"><s>$80.000</s></p>
+                                <p class="mt-3 text-black fs-3">$60.999</p>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/ofertas/oferta2.webp" class="card-img-top "
+                            alt="whatch-6-classic">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Samsung Watch6 Classic 47mm</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Lucí tu mejor aspecto. Hacé más cosas a la vez. Ese es el sueño.
+                                Lo estamos haciendo realidad con nuestra pantalla de reloj más grande hasta la
+                                fecha,
+                                rutinas de ejercicio personalizadas y seguimiento del sueño, todo ello con una
+                                estética
+                                atemporal.1, 2
+                                Comenzá a disfrutar de un bienestar diario con un clásico refinado
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h6 class="mt-3 text-black"><s>$707.000</s></h6>
+                                <h5 class="mt-3 text-black fs-3">$649.999</h5>
+                            </div>
+                            <div>
+                                <div class="d-flex w-100 h-100">
+                                    <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                        <i class="bi bi-eye"></i> Ver
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/ofertas/oferta3.webp" class="card-img-top "
+                            alt="Colmi V23 Pro">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Smartwatch Colmi V23 Pro</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                El Smartwatch Colmi V23 Pro es la nueva generación de relojes inteligentes de
+                                COLMI con
+                                monitorización de la temperatura corporal, funciones de monitorización del ritmo
+                                cardíaco y del sueño. Manténgase al tanto de los cambios en la temperatura
+                                corporal y
+                                comprenda su salud física.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h6 class="mt-3 text-black"><s>$93.499</s></h6>
+                                <h5 class="mt-3 text-black fs-3">$83.399</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/ofertas/oferta4.jpg" class="card-img-top "
+                            alt="Casio Vintage">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">Reloj Casio Vintage A-158wa-1</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Reloj analógico-digital
+                                Los relojes analógicos-digitales permiten ver la hora en las agujas y en la
+                                pantalla
+                                digital, que se puede configurar en formato de 24h o 12h.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h6 class="mt-3 text-black"><s>$70.000</s></h6>
+                                <h5 class="mt-3 text-black fs-3">$64.260</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/ofertas/oferta5.webp" class="card-img-top "
+                            alt="Forerunner 55 Running Garmin">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Smartwatch Forerunner 55 Running Garmin</h5>
+                            <p class="card-text text-black">
+                                EL reloj tiene resistencia a 5 ATM y más de 70 modos deportivos y los deportes
+                                más
+                                populares de interior y exterior. Además cuenta con GPS integrado.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h6 class="mt-3 text-black"><s>$350.000</s></h6>
+                                <h5 class="mt-3 text-black fs-3">$250.000</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="container mt-5">
+            <h3 class="display-1 text-center mb-3">SMARTWATCHS</h3>
+            <article class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card">
+                        <img src="./img/imagenes del proyecto/smartwatch/smart1.jpg" class="card-img-top"
+                            alt="Smartwatch MARQ Aviator (Gen 2)">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">Smartwatch MARQ Aviator (Gen 2)</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Fiel a sí mismo y ajeno al paso del tiempo. Este reloj moderno, lujoso y especializado
+                                posee una pulsera
+                                de titanio reforzada apta para vuelos de alta velocidad, una pantalla táctil AMOLED
+                                excepcional con
+                                botones de control tradicionales y una carcasa de 46 mm hecha de titanio de grado 5 que
+                                aporta una
+                                resistencia extraordinaria
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$4.615.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/smart2.jpg" class="card-img-top "
+                            alt="MARQ Commander (Gen 2)">
+                        <div class="card-body d-flex flex-column n">
+                            <h5 class="card-title text-black">MARQ Commander (Gen 2) - Edición Carbon</h5>
+                            <p class="card-text text-black ">
+                                Además de estar diseñado para las misiones más duras, este moderno reloj incorpora una
+                                pantalla táctil
+                                AMOLED excepcional con botones de control tradicionales. La caja de 46 mm está fabricada
+                                del material
+                                Fused Carbon Fiber™ para ofrecer un diseño de rendimiento ultrarresistente.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$6.154.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/smart3.avif" class="card-img-top "
+                            alt="MARQ Golfer (Gen 2)">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">Smartwatch MARQ Golfer (Gen 2)</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Exhibe tu pasión por este deporte ante los demás. Este reloj moderno y lujoso posee una
+                                correa de nailon
+                                Jacquard en tres tonos de verde, una pantalla táctil AMOLED excepcional con botones de
+                                control
+                                tradicionales y una carcasa de 46 mm hecha de titanio de grado 5 que aporta una
+                                resistencia
+                                extraordinaria.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$4.423.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/smart4.webp" class="card-img-top "
+                            alt="MARQ Captain (Gen 2)">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Smartwatch MARQ Captain (Gen 2)</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Este reloj moderno y lujoso, diseñado específicamente para quienes viven por el mar,
+                                posee una correa de
+                                nailon Jacquard de rayas inspirada en las regatas y una pantalla táctil AMOLED
+                                excepcional con botones
+                                de control tradicionales. La carcasa de 46 mm está hecha de titanio de grado 5, que
+                                aporta una
+                                resistencia extraordinaria.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$4.231.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/smart5.webp" class="card-img-top "
+                            alt="TAG Heuer Connected Calibre E4 Golden Bright Edition">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">TAG Heuer Connected Calibre E4 Golden Bright Edition</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Reloj TAG Heuer Connected Calibre E4 Golden Bright Edition de movimiento digital. Este
+                                modelo presenta
+                                como principales funciones e indicadores: smartwach. La caja de acero y oro rosa tiene
+                                42 mm de diámetro
+                                con hermeticidad de hasta 50 m. La esfera es de color azul acompañada de correa de piel
+                                con cierre
+                                desplegable
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$1.600.000</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/tag-heuer-connected-calibre-e4-golf-editio-sbr8a81eb0251-75.jpg"
+                            class="card-img-top " alt="TAG HEUER CONNECTED CALIBRE E4 GOLF EDITION">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">TAG HEUER CONNECTED CALIBRE E4 GOLF EDITION</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Este TAG Heuer Connected Golf Edition presenta una dimensión relojera completamente
+                                nueva y lleva el
+                                lujo y la tecnología vanguardista hasta sus últimas consecuencias. Equipado con una caja
+                                de titanio
+                                ultraligero de 45 mm, el reloj lleva la aplicación TAG Heuer Golf integrada, que le
+                                permite hacer un
+                                seguimiento de sus hitos en más de 40 000 pistas.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$1.800.000</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/samsung-galaxy-watch6-40mm-bluetooth-smartwatch-cream-2-1024x1024.jpg"
+                            class="card-img-top " alt="WATCH-6">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-black">Smartwatch Galaxy Watch6 (Bluetooth, 40mm)</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                El reloj que mejor te conoce vuelve con una experiencia de salud más personalizada y un
+                                seguimiento del
+                                sueño mejorado. Empezá el día con una buena noche de sueño gracias al entrenamiento del
+                                sueño, ahora
+                                disponible en el Galaxy Watch6.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$493.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 cardCenter mb-3 mt-5 d-flex flex-wrap">
+                    <div class="cardMove card-smaller bg-hex border border-black card ">
+                        <img src="./img/imagenes del proyecto/smartwatch/Samsungwatch5problack_1024x.webp"
+                            class="card-img-top " alt="watch5-pro">
+                        <div class="card-body d-flex flex-column ">
+                            <h5 class="card-title text-black">Smartwatch Galaxy Watch5 Pro Bluetooth (45mm)</h5>
+                            <p class="card-text text-black flex-grow-1">
+                                Descansá mejor, rendí más
+                                Gracias a la función de monitoreo del sueño podrás aprender más acerca de tus hábitos
+                                por las noches y
+                                la calidad de tu descanso para que puedas rendir mejor al día siguiente.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mt-3 text-black fs-3">$740.999</h5>
+                            </div>
+                            <div class="d-flex w-100 h-100">
+                                <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                    <i class="bi bi-eye"></i> Ver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <article class="container d-flex justify-content-center pt-5">
+        <video class="vide" preload="auto" autoplay muted lopp>
+            <source src="./video/Galaxy Watch 4  El reloj que mejor te conoce.mp4" type="video/mp4">
+        </video>
+    </article>
+
+    <section class="container mt-5">
+        <h2 class="text-center mb-3 fs-1">SmartWatch Tradicionales</h2>
+        <article class="row justify-content-center py-5">
+            <section class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center  d-flex flex-wrap">
+                <div class="cardMove card-smaller bg-hex border border-black card">
+                    <img src="./img/whatch 3 plus.png" class="card-img-top" alt="whatch-3-plus" />
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-black">Watch 3 Plus 4gb Negro</h5>
+                        <p class="card-text text-black">
+                            El reloj tiene más de 173 modos deportivos, entre los que se
+                            incluyen los más típicos como correr, bicicleta y los deportes
+                            más populares de interior y exterior.
+                        </p>
+                        <div class="d-flex justify-content-between">
+
+                            <h5 class="mt-3 text-black fs-3">$120.000</h5>
+                        </div>
+                        <div class="d-flex w-100 h-100">
+                            <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end"> <i
+                                    class="bi bi-eye"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center  d-flex flex-wrap">
+                <div class="cardMove card-smaller bg-hex border border-black card">
+                    <img src="./img/smartWatchDT88Rosa.webp" class="card-img-top" alt="whatch-DT88-Max" />
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-black">SmartWatch DT88 Max Rosa</h5>
+                        <p class="card-text text-black">
+                            Nueva alternativa para aquellos SmartWatch que no cuentan con
+                            GPS Integrado. El mismo consiste en realizar tu actividad
+                            favorita llevando tu reloj con el celular.
+                        </p>
+                        <div class="d-flex justify-content-between">
+
+                            <h5 class="mt-3 text-black fs-3">$84.000</h5>
+                        </div>
+                        <div class="d-flex w-100 h-100">
+                            <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                <i class="bi bi-eye"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center  d-flex flex-wrap">
+                <div class="cardMove card-smaller bg-hex border border-black card">
+                    <img src="./img/SMARTWATCHdt4.webp" class="card-img-top" alt="whatch-3-plus" />
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-black">SmartWatch Dt4 Plus Rosa</h5>
+                        <p class="card-text text-black">
+                            Controlar el registro de la cantidad de pasos realizados, Km
+                            recorridos. Configura las notificaciones que deseas que
+                            lleguen a tu reloj. Configura la función de llamadas.
+                        </p>
+                        <div class="d-flex justify-content-between">
+
+                            <h5 class="mt-3 text-black fs-3">$95.000</h5>
+                        </div>
+                        <div class="d-flex w-100 h-100">
+                            <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end"> <i
+                                    class="bi bi-eye"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center  d-flex flex-wrap">
+                <div class="cardMove card-smaller bg-hex border border-black card">
+                    <img src="./img/galaxy4.webp" class="card-img-top" alt="Galaxy4" />
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-black">Samsung Galaxy 4 40mm</h5>
+                        <p class="card-text text-black">
+                            Conocé tu cuerpo y más para alcanzar tus objetivos. El sensor
+                            bioactivo Samsung y nuestro chip más rápido aportan la mayor
+                            innovación al Galaxy Watch.
+                        </p>
+                        <div class="d-flex justify-content-between">
+
+                            <h5 class="mt-3 text-black fs-3">$300.000</h5>
+                        </div>
+                        <div class="d-flex w-100 h-100">
+                            <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end"><i
+                                    class="bi bi-eye"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center  d-flex flex-wrap">
+                <div class="cardMove card-smaller bg-hex border border-black card">
+                    <img src="./img/amazfit-gts-2-mini.webp" class="card-img-top" alt="Amazfit2" />
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-black">Amazfit Gts 2 Mini Negro</h5>
+                        <p class="card-text text-black">
+                            EL reloj tiene resistencia a 5 ATM y más de 70 modos
+                            deportivos y los deportes más populares de interior y
+                            exterior. Además cuenta con GPS integrado.
+                        </p>
+                        <div class="d-flex justify-content-between">
+
+                            <h5 class="mt-3 text-black fs-3">$250.000</h5>
+                        </div>
+                        <div class="d-flex w-100 h-100">
+                            <a href="./pages/producto.html" class="btn btn-primary mt-3 align-self-end">
+                                <i class="bi bi-eye"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </section>
+
+    <article class="container d-flex justify-content-center pb-5">
+        <video class="vide" preload="auto" autoplay muted lopp>
+            <source src="./video/Amazfit GTS 2 mini  New Version  Mini Size, Max Power.mp4" type="video/mp4">
+        </video>
+    </article>
+    </main>
+    <footer class="d-flex justify-content-center" id="fondoFooter">
+        <section class="row container text-center">
+            <article class="col-sm-12 col-md-4 col-lg-4 my-5">
+                <div>
+                    <img src="./img/imagenLogo.jpeg" class="rounded-circle" alt="logoReloj" width="110px" />
+                </div>
+            </article>
+            <article class="col-sm-12 col-md-4 col-lg-4 my-5">
+                <div class="text-light">
+                    <h5>Horario de atención</h5>
+                    <p class="lead">Lunes a Viernes: 09hs - 20hs </p>
+                </div>
+            </article>
+            <article class="col-sm-12 col-md-4 col-lg-4 my-5">
+                <div class="text-light">
+                    <h5>Seguinos en nuestras redes</h5>
+                    <a href="Error404.html" class="text-light text-decoration-none"><i
+                            class="bi bi-facebook fs-3  me-3 footSocial"></i></a>
+                    <a href="Error404.html" class="text-light text-decoration-none"><i
+                            class="bi bi-instagram fs-3 m-3 footSocial"></i></a>
+                    <a href="Error404.html" class="text-light text-decoration-none"><i
+                            class="bi bi-twitter fs-3 m-3 footSocial"></i></a>
+                </div>
+            </article>
+        </section>
+    </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

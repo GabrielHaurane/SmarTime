@@ -1,0 +1,96 @@
+*{
+  border: 0;
+  padding: 0;
+}
+
+.place::placeholder {
+color: rgb(97, 97, 97);
+opacity: 1;
+}
+
+
+.icon {
+    margin-right: 1em;
+  }
+  
+  /*estilo color footer */
+  .bg-hexLightBlue {
+    background: #007190;
+  }
+  #fondoFooter{
+      background:#007190 ;
+  }
+  
+
+.img-personal{
+  height: 200px;
+}
+h4{
+    font-size: 1.3em;
+}
+/*navbar*/
+#logo {
+  height: 70px;
+  border-radius: 50px;
+}
+
+nav {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 650;
+  width: 100vw;
+  background-color: #007190;
+}
+
+nav div a {
+  width: 100px;
+}
+
+nav div .linksNav:hover {
+  background-color: rgba(41, 35, 35, 0.678);
+  border-radius: 10px;
+  color: white;
+}
+
+
+/*contenedor de la img y el form*/
+#img_form {
+  display: flex;
+  flex-direction: row;
+}
+
+/*inputs del form*/
+.form-group input {
+  width: calc(100% - 5px);
+}
+
+/*enlace del footer para recuperar contraseña*/
+.modal-footer a {
+  border: 1px solid #b6d4fe;
+  border-radius: 5px;
+  background-color: #0dcaf0;
+  padding: 2px;
+  text-decoration: none;
+  color:rgba(41, 35, 35, 0.678)
+}
+
+/*media quieries*/
+@media all and (max-width: 460px){
+    #img_form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #modal_body_img {
+      width: 100%;
+    }
+}
+.accordion_h2{
+  z-index: 2;
+}
+.vide{
+  width: 100%;
+}
+.capa {
+  z-index: -1;
+}
