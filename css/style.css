@@ -7,6 +7,9 @@ body {
 }
 
 /*estilo color nav*/
+nav {
+z-index: 3;
+}
 .bg-hexblue {
   background: #0d264b;
 }
@@ -183,4 +186,8 @@ h3 {
 
 .contenedor_404 {
   margin-top: -50px;
+}
+
+.accordion-button:focus {
+  z-index: 1;
 }
