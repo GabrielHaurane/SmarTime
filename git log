@@ -1,0 +1,17 @@
+[33mcommit 5511b9fc8201a3a4cd71270fdcc0ab26af040b75[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mpaginaContacto[m[33m)[m
+Author: Gabriel Haurane <gabrielhaurane@gmail.com>
+Date:   Sat Jun 22 09:12:57 2024 -0300
+
+    se acomodo la pagina de contactos el mapa y el formulario
+
+[33mcommit 387a3f5de39a2b1ff9253260762423b4b3b7fde6[m[33m ([m[1;32mdev[m[33m)[m
+Author: Gabriel Haurane <gabrielhaurane@gmail.com>
+Date:   Sat Jun 22 08:17:25 2024 -0300
+
+    cambie el color de titulo de smartime
+
+[33mcommit c6f9879dcc37659257abfb78d5c8f0484a2e8e05[m[33m ([m[1;32mmain[m[33m)[m
+Author: Gabriel Haurane <gabrielhaurane@gmail.com>
+Date:   Sat Jun 22 07:30:38 2024 -0300
+
+    Estructura principal del proyecto
